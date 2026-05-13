@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BOTANIQUE PARIS | Skincare & Beauty</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f8f5ef;
+      color:#2d2d2d;
+    }
+
+    header{
+      width:100%;
+      background:#ffffff;
+      padding:20px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid #e6e0d7;
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:700;
+      letter-spacing:2px;
+      color:#8c6a3d;
+      text-transform:uppercase;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#333;
+      margin-left:28px;
+      font-size:15px;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    nav a:hover{
+      color:#8c6a3d;
+    }
+
+    .hero{
+      height:720px;
+      background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1800') center/cover;
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:#fff;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.38);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:850px;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:76px;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .hero p{
+      font-size:24px;
+      line-height:1.8;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      background:#8c6a3d;
+      color:#fff;
+      text-decoration:none;
+      padding:18px 42px;
+      border-radius:8px;
+      font-weight:bold;
+      font-size:16px;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn:hover{
+      background:#6f512d;
+      transform:scale(1.05);
+    }
+
+    .products{
+      padding:90px 60px;
+      background:#fff;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:44px;
+      margin-bottom:60px;
+      color:#8c6a3d;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:35px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 4px 18px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
+
+    .card-body{
+      padding:25px;
+    }
+
+    .card h3{
+      font-size:24px;
+      margin-bottom:12px;
+      color:#333;
+    }
+
+    .card p{
+      color:#666;
+      line-height:1.8;
+    }
+
+    .price{
+      margin:18px 0;
+      font-size:30px;
+      color:#8c6a3d;
+      font-weight:bold;
+    }
+
+    .about{
+      background:#efe8dc;
+      padding:100px 60px;
+      text-align:center;
+    }
+
+    .about h2{
+      font-size:52px;
+      margin-bottom:25px;
+      color:#8c6a3d;
+    }
+
+    .about p{
+      max-width:850px;
+      margin:auto;
+      line-height:1.9;
+      color:#555;
+      margin-bottom:35px;
+      font-size:18px;
+    }
+
+    footer{
+      background:#ffffff;
+      padding:60px;
+      border-top:1px solid #e6e0d7;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px;
+    }
+
+    footer h4{
+      margin-bottom:15px;
+      font-size:22px;
+      color:#8c6a3d;
+    }
+
+    footer p{
+      line-height:1.8;
+      color:#666;
+      font-size:15px;
+    }
+
+    .copyright{
+      margin-top:40px;
+      border-top:1px solid #e6e0d7;
+      padding-top:20px;
+      text-align:center;
+      color:#777;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      .hero h1{
+        font-size:44px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    BOTANIQUE PARIS
+  </div>
+
+  <nav>
+    <a href="#">Skincare</a>
+    <a href="#">Corpo</a>
+    <a href="#">Perfumes</a>
+    <a href="#">Coleções</a>
+    <a href="#">Contato</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>Beleza Natural Premium</h1>
+
+    <p>
+      Produtos sofisticados inspirados nos ingredientes
+      botânicos mais luxuosos do mundo.
+    </p>
+
+    <a href="#" class="btn">
+      EXPLORAR AGORA
+    </a>
+
+  </div>
+
+</section>
+
+<section class="products">
+
+  <h2 class="section-title">
+    Produtos em Destaque
+  </h2>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1200">
+
+      <div class="card-body">
+
+        <h3>Sérum Revitalizante</h3>
+
+        <p>
+          Fórmula premium para hidratação profunda e luminosidade.
+        </p>
+
+        <div class="price">
+          R$ 189,90
+        </div>
+
+        <a href="#" class="btn">
+          Comprar
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=1200">
+
+      <div class="card-body">
+
+        <h3>Creme Corporal Luxe</h3>
+
+        <p>
+          Textura sofisticada com fragrância elegante e duradoura.
+        </p>
+
+        <div class="price">
+          R$ 149,90
+        </div>
+
+        <a href="#" class="btn">
+          Comprar
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1200">
+
+      <div class="card-body">
+
+        <h3>Perfume Essence</h3>
+
+        <p>
+          Aroma refinado inspirado na perfumaria francesa.
+        </p>
+
+        <div class="price">
+          R$ 279,90
+        </div>
+
+        <a href="#" class="btn">
+          Comprar
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="about">
+
+  <h2>
+    Ingredientes Inspirados na Natureza
+  </h2>
+
+  <p>
+    Desenvolvemos cosméticos premium utilizando ingredientes botânicos
+    cuidadosamente selecionados para proporcionar uma experiência
+    sofisticada de cuidados pessoais e bem-estar.
+  </p>
+
+  <a href="#" class="btn">
+    CONHECER A MARCA
+  </a>
+
+</section>
+
+<footer>
+
+  <div class="footer-grid">
+
+    <div>
+
+      <h4>Sobre Nós</h4>
+
+      <p>
+        Marca especializada em skincare, perfumes
+        e cosméticos premium inspirados na natureza.
+      </p>
+
+    </div>
+
+    <div>
+
+      <h4>Contato</h4>
+
+      <p>Email: contato@botaniqueparis.com.br</p>
+
+      <p>Telefone: (11) 4000-4000</p>
+
+      <p>WhatsApp: (11) 99999-9999</p>
+
+    </div>
+
+    <div>
+
+      <h4>Endereço</h4>
+
+      <p>
+        Rua Haddock Lobo, 1300<br>
+        Cerqueira César - São Paulo/SP<br>
+        CEP: 01414-002
+      </p>
+
+      <p>
+        CNPJ: 12.345.678/0001-99
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 BOTANIQUE PARIS — Todos os direitos reservados.
+  </div>
+
+</footer>
+
+</body>
+</html>
