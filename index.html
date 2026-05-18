@@ -1,480 +1,656 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18144627452"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  gtag('config', 'AW-18144627452');
-</script>
+<title>DermaLune™ | Skincare Premium</title>
 
-  <!-- Event snippet for Visualização de página conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18144627452/sI7GCKi7l6wcEPyVhMxD',
-      'value': 1.0,
-      'currency': 'BRL'
-  });
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<style>
 
-  <!-- Event snippet for Visualização de página conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18144627452/sI7GCKi7l6wcEPyVhMxD',
-      'value': 1.0,
-      'currency': 'BRL',
-      'event_callback': callback
-  });
-  return false;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
-</script>
 
+body{
+    background:#f8f6f3;
+    color:#1f1f1f;
+    overflow-x:hidden;
+}
 
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    z-index:999;
+    padding:22px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
+}
 
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#1f352f;
+}
 
-  <title>BOTANIQUE PARIS | Skincare & Beauty</title>
+.logo span{
+    color:#9bb5ab;
+}
 
-  <style>
+nav a{
+    text-decoration:none;
+    margin-left:28px;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, Helvetica, sans-serif;
-    }
+nav a:hover{
+    color:#9bb5ab;
+}
 
-    body{
-      background:#f8f5ef;
-      color:#2d2d2d;
-    }
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:140px 8% 90px;
+    gap:60px;
+}
 
-    header{
-      width:100%;
-      background:#ffffff;
-      padding:20px 60px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      border-bottom:1px solid #e6e0d7;
-      position:sticky;
-      top:0;
-      z-index:999;
-    }
+.hero-text{
+    flex:1;
+}
 
-    .logo{
-      font-size:32px;
-      font-weight:700;
-      letter-spacing:2px;
-      color:#8c6a3d;
-      text-transform:uppercase;
-    }
+.hero-text small{
+    color:#9bb5ab;
+    font-weight:600;
+    letter-spacing:2px;
+}
 
-    nav a{
-      text-decoration:none;
-      color:#333;
-      margin-left:28px;
-      font-size:15px;
-      transition:0.3s;
-      font-weight:600;
-    }
+.hero-text h1{
+    font-size:68px;
+    line-height:1.05;
+    margin:25px 0;
+    color:#1f352f;
+}
 
-    nav a:hover{
-      color:#8c6a3d;
-    }
+.hero-text p{
+    color:#666;
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:40px;
+    max-width:620px;
+}
 
-    .hero{
-      height:720px;
-      background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1800') center/cover;
-      position:relative;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      color:#fff;
-    }
+.btn{
+    display:inline-block;
+    padding:18px 42px;
+    border-radius:50px;
+    background:#1f352f;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
 
-    .hero::before{
-      content:'';
-      position:absolute;
-      width:100%;
-      height:100%;
-      background:rgba(0,0,0,0.38);
-    }
+.btn:hover{
+    background:#4d6c62;
+    transform:translateY(-4px);
+}
 
-    .hero-content{
-      position:relative;
-      z-index:2;
-      max-width:850px;
-      padding:20px;
-    }
+.hero-image{
+    flex:1;
+}
 
-    .hero h1{
-      font-size:76px;
-      margin-bottom:20px;
-      font-weight:700;
-    }
+.hero-image img{
+    width:100%;
+    border-radius:28px;
+    object-fit:cover;
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
 
-    .hero p{
-      font-size:24px;
-      line-height:1.8;
-      margin-bottom:35px;
-    }
+.section{
+    padding:110px 8%;
+}
 
-    .btn{
-      background:#8c6a3d;
-      color:#fff;
-      text-decoration:none;
-      padding:18px 42px;
-      border-radius:8px;
-      font-weight:bold;
-      font-size:16px;
-      transition:0.3s;
-      display:inline-block;
-    }
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
 
-    .btn:hover{
-      background:#6f512d;
-      transform:scale(1.05);
-    }
+.section-title h2{
+    font-size:50px;
+    color:#1f352f;
+    margin-bottom:15px;
+}
 
-    .products{
-      padding:90px 60px;
-      background:#fff;
-    }
+.section-title p{
+    max-width:760px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
 
-    .section-title{
-      text-align:center;
-      font-size:44px;
-      margin-bottom:60px;
-      color:#8c6a3d;
-    }
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:35px;
-    }
+.card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    transition:.3s;
+}
 
-    .card{
-      background:#fff;
-      border-radius:14px;
-      overflow:hidden;
-      box-shadow:0 4px 18px rgba(0,0,0,0.08);
-      transition:0.3s;
-    }
+.card:hover{
+    transform:translateY(-10px);
+}
 
-    .card:hover{
-      transform:translateY(-8px);
-    }
+.card img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+}
 
-    .card img{
-      width:100%;
-      height:320px;
-      object-fit:cover;
-    }
+.card-content{
+    padding:35px;
+}
 
-    .card-body{
-      padding:25px;
-    }
+.card-content h3{
+    font-size:28px;
+    color:#1f352f;
+    margin-bottom:15px;
+}
 
-    .card h3{
-      font-size:24px;
-      margin-bottom:12px;
-      color:#333;
-    }
+.card-content p{
+    color:#666;
+    line-height:1.8;
+}
 
-    .card p{
-      color:#666;
-      line-height:1.8;
-    }
+.about{
+    display:flex;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+}
 
-    .price{
-      margin:18px 0;
-      font-size:30px;
-      color:#8c6a3d;
-      font-weight:bold;
-    }
+.about img{
+    width:520px;
+    border-radius:28px;
+    box-shadow:0 20px 50px rgba(0,0,0,.1);
+}
 
-    .about{
-      background:#efe8dc;
-      padding:100px 60px;
-      text-align:center;
-    }
+.about-text{
+    flex:1;
+}
 
-    .about h2{
-      font-size:52px;
-      margin-bottom:25px;
-      color:#8c6a3d;
-    }
+.about-text h2{
+    font-size:52px;
+    color:#1f352f;
+    margin-bottom:25px;
+}
 
-    .about p{
-      max-width:850px;
-      margin:auto;
-      line-height:1.9;
-      color:#555;
-      margin-bottom:35px;
-      font-size:18px;
-    }
+.about-text p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:20px;
+}
 
-    footer{
-      background:#ffffff;
-      padding:60px;
-      border-top:1px solid #e6e0d7;
-    }
+.benefits{
+    background:#edf3ef;
+}
 
-    .footer-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:40px;
-    }
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
 
-    footer h4{
-      margin-bottom:15px;
-      font-size:22px;
-      color:#8c6a3d;
-    }
+.benefit{
+    background:#fff;
+    padding:45px 35px;
+    border-radius:24px;
+    text-align:center;
+}
 
-    footer p{
-      line-height:1.8;
-      color:#666;
-      font-size:15px;
-    }
+.benefit h3{
+    color:#1f352f;
+    margin:20px 0 15px;
+}
 
-    .copyright{
-      margin-top:40px;
-      border-top:1px solid #e6e0d7;
-      padding-top:20px;
-      text-align:center;
-      color:#777;
-      font-size:14px;
-    }
+.benefit p{
+    color:#666;
+    line-height:1.8;
+}
 
-    @media(max-width:768px){
+.testimonials{
+    background:#fff;
+}
 
-      header{
-        flex-direction:column;
-      }
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
 
-      nav{
-        margin-top:15px;
-      }
+.testimonial{
+    background:#f8f6f3;
+    padding:35px;
+    border-radius:24px;
+}
 
-      .hero h1{
-        font-size:44px;
-      }
+.testimonial p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:20px;
+}
 
-      .hero p{
-        font-size:18px;
-      }
+.testimonial h4{
+    color:#1f352f;
+}
 
-    }
+.cta{
+    padding:120px 8%;
+    background:#1f352f;
+    text-align:center;
+    color:#fff;
+}
 
-  </style>
+.cta h2{
+    font-size:58px;
+    margin-bottom:20px;
+}
 
+.cta p{
+    max-width:720px;
+    margin:auto;
+    line-height:1.9;
+    color:#ddd;
+    margin-bottom:40px;
+}
+
+.cta .btn{
+    background:#fff;
+    color:#1f352f;
+}
+
+footer{
+    background:#111;
+    color:#999;
+    padding:70px 8%;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:40px;
+}
+
+footer h3{
+    color:#fff;
+    margin-bottom:20px;
+}
+
+footer p,
+footer a{
+    color:#999;
+    text-decoration:none;
+    line-height:2;
+}
+
+.copy{
+    margin-top:50px;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:25px;
+    text-align:center;
+    font-size:14px;
+}
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:32px;
+    text-decoration:none;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:46px;
+}
+
+.hero-image img,
+.about img{
+    width:100%;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-  <div class="logo">
-    BOTANIQUE PARIS
-  </div>
+<div class="logo">
+Derma<span>Lune</span>
+</div>
 
-  <nav>
-    <a href="#">Skincare</a>
-    <a href="#">Corpo</a>
-    <a href="#">Perfumes</a>
-    <a href="#">Coleções</a>
-    <a href="#">Contato</a>
-  </nav>
+<nav>
+<a href="#">Home</a>
+<a href="#">Produtos</a>
+<a href="#">Sobre</a>
+<a href="#">Contato</a>
+</nav>
 
 </header>
 
 <section class="hero">
 
-  <div class="hero-content">
+<div class="hero-text">
 
-    <h1>Beleza Natural Premium</h1>
+<small>ADVANCED SKINCARE</small>
 
-    <p>
-      Produtos sofisticados inspirados nos ingredientes
-      botânicos mais luxuosos do mundo.
-    </p>
+<h1>
+Tecnologia e natureza para uma pele impecável.
+</h1>
 
-    <a href="#" class="btn">
-      EXPLORAR AGORA
-    </a>
+<p>
+Descubra uma nova geração de cosméticos premium desenvolvidos com ativos modernos e fórmulas avançadas para hidratação, firmeza e rejuvenescimento visível.
+</p>
 
-  </div>
+<a href="#" class="btn">
+Conheça a Linha
+</a>
 
-</section>
+</div>
 
-<section class="products">
+<div class="hero-image">
 
-  <h2 class="section-title">
-    Produtos em Destaque
-  </h2>
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1400&auto=format&fit=crop">
 
-  <div class="grid">
-
-    <div class="card">
-
-      <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1200">
-
-      <div class="card-body">
-
-        <h3>Sérum Revitalizante</h3>
-
-        <p>
-          Fórmula premium para hidratação profunda e luminosidade.
-        </p>
-
-        <div class="price">
-          R$ 189,90
-        </div>
-
-        <a href="#" class="btn">
-          Comprar
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=1200">
-
-      <div class="card-body">
-
-        <h3>Creme Corporal Luxe</h3>
-
-        <p>
-          Textura sofisticada com fragrância elegante e duradoura.
-        </p>
-
-        <div class="price">
-          R$ 149,90
-        </div>
-
-        <a href="#" class="btn">
-          Comprar
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <img src="https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1200">
-
-      <div class="card-body">
-
-        <h3>Perfume Essence</h3>
-
-        <p>
-          Aroma refinado inspirado na perfumaria francesa.
-        </p>
-
-        <div class="price">
-          R$ 279,90
-        </div>
-
-        <a href="#" class="btn">
-          Comprar
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<section class="about">
+<section class="section">
 
-  <h2>
-    Ingredientes Inspirados na Natureza
-  </h2>
+<div class="section-title">
 
-  <p>
-    Desenvolvemos cosméticos premium utilizando ingredientes botânicos
-    cuidadosamente selecionados para proporcionar uma experiência
-    sofisticada de cuidados pessoais e bem-estar.
-  </p>
+<h2>Nossos Produtos</h2>
 
-  <a href="#" class="btn">
-    CONHECER A MARCA
-  </a>
+<p>
+Fórmulas sofisticadas desenvolvidas para elevar sua rotina diária de skincare.
+</p>
+
+</div>
+
+<div class="products">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Cleansing Oil</h3>
+
+<p>
+Limpeza profunda que remove maquiagem e impurezas preservando a hidratação natural da pele.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Foam Cleanser</h3>
+
+<p>
+Espuma suave para limpeza diária com textura leve e sensação refrescante.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Hydra Repair Cream</h3>
+
+<p>
+Hidratação intensa com ativos modernos para firmeza e luminosidade imediata.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section benefits">
+
+<div class="section-title">
+
+<h2>Por Que Escolher a DermaLune™?</h2>
+
+</div>
+
+<div class="benefit-grid">
+
+<div class="benefit">
+
+<h3>Ativos Premium</h3>
+
+<p>
+Ingredientes cuidadosamente selecionados para resultados reais e sofisticados.
+</p>
+
+</div>
+
+<div class="benefit">
+
+<h3>Tecnologia Dermatológica</h3>
+
+<p>
+Produtos desenvolvidos com foco em performance e segurança para todos os tipos de pele.
+</p>
+
+</div>
+
+<div class="benefit">
+
+<h3>Experiência Luxuosa</h3>
+
+<p>
+Texturas leves e sensações exclusivas para transformar sua rotina de autocuidado.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1400&auto=format&fit=crop">
+
+<div class="about-text">
+
+<h2>
+Skincare premium pensado para resultados reais.
+</h2>
+
+<p>
+A DermaLune™ nasceu da união entre tecnologia cosmética avançada e ingredientes naturais de alta performance.
+</p>
+
+<p>
+Criamos produtos sofisticados para pessoas que valorizam bem-estar, autocuidado e beleza inteligente.
+</p>
+
+<a href="#" class="btn">
+Conhecer Marca
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section testimonials">
+
+<div class="section-title">
+
+<h2>O que nossas clientes dizem</h2>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+
+<p>
+“Minha pele ficou muito mais hidratada e luminosa em poucas semanas.”
+</p>
+
+<h4>Amanda Ribeiro</h4>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+“A textura dos produtos é surreal. Parece skincare de marca internacional.”
+</p>
+
+<h4>Fernanda Lopes</h4>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+“Finalmente encontrei produtos que realmente entregam resultado.”
+</p>
+
+<h4>Juliana Costa</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+Sua nova rotina começa aqui.
+</h2>
+
+<p>
+Descubra cosméticos premium desenvolvidos para transformar sua pele e elevar sua experiência de autocuidado.
+</p>
+
+<a href="#" class="btn">
+Comprar Agora
+</a>
 
 </section>
 
 <footer>
 
-  <div class="footer-grid">
+<div class="footer-grid">
 
-    <div>
+<div>
 
-      <h4>Sobre Nós</h4>
+<h3>DermaLune™</h3>
 
-      <p>
-        Marca especializada em skincare, perfumes
-        e cosméticos premium inspirados na natureza.
-      </p>
+<p>
+Skincare premium desenvolvido com tecnologia dermatológica avançada.
+</p>
 
-    </div>
+</div>
 
-    <div>
+<div>
 
-      <h4>Contato</h4>
+<h3>Contato</h3>
 
-      <p>Email: contato@botaniqueparis.com.br</p>
+<p>contato@dermalune.com.br</p>
+<p>(11) 99999-9999</p>
+<p>São Paulo - SP</p>
 
-      <p>Telefone: (11) 4000-4000</p>
+</div>
 
-      <p>WhatsApp: (11) 99999-9999</p>
+<div>
 
-    </div>
+<h3>Institucional</h3>
 
-    <div>
+<p><a href="#">Política de Privacidade</a></p>
+<p><a href="#">Termos de Uso</a></p>
+<p><a href="#">Trocas e Devoluções</a></p>
 
-      <h4>Endereço</h4>
+</div>
 
-      <p>
-        Rua Haddock Lobo, 1300<br>
-        Cerqueira César - São Paulo/SP<br>
-        CEP: 01414-002
-      </p>
+</div>
 
-      <p>
-        CNPJ: 12.345.678/0001-99
-      </p>
+<div class="copy">
 
-    </div>
+© 2026 DermaLune™ — CNPJ: 52.847.921/0001-84 — Todos os direitos reservados.
 
-  </div>
-
-  <div class="copyright">
-    © 2026 BOTANIQUE PARIS — Todos os direitos reservados.
-  </div>
+</div>
 
 </footer>
+
+<a class="whatsapp" href="#">
+☎
+</a>
 
 </body>
 </html>
